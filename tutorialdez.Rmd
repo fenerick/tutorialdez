@@ -1,0 +1,21 @@
+---
+title: "testedez"
+author: "José Bruno"
+date: "15/05/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library("tidyverse")
+library("nycflights13")
+
+flights %>% ggplot() + 
+  geom_density(aes(dep_delay)) +
+  xlim(0, 100)
+```
+
